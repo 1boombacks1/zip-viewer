@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Список файлов</title>
+    </head>
+
+    <body>
+        <header>
+            <h2>🚀 Работу выполнил Николаев Яков</h2>
+            <p><a href='https://github.com/1boombacks1/'>🌌 Github</a></p>
+        </header>
+        <main>
+            <h4>Расширение - {{.Ext}}</h4>
+            <h4>Количество файлов - {{.FileCount}}</h4>
+            <table>
+                <tr>
+                    <th>Имя файла</th>
+                    <th>Размер</th>
+                    <th>Дата изменения</th>
+                </tr>
+                {{range .Files}}
+                <tr>
+                    <td>{{.Name}}</td>
+                    <td>{{.Size}} КБ</td>
+                    <td>{{.ModifiedDate}}</td>
+                </tr>
+                {{end}}
+            </table>
+        </main>
+    </body>
+</html>
